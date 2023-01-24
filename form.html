@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main">
+            <div class="icon">
+                <h1 class="logo">FogyTrips</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li>
+                        <a href="#">TRIPS</a>
+                    </li>
+                    <li>
+                        <a href="#">BOOKING</a>
+                    </li>
+                    <li>
+                        <a href="#">CONTACT</a>
+
+                </ul>
+            </div>
+            <div class="search">
+
+                <input class="src" type="search" name="" placeholder="type your text">
+                <a href="#"><button class="btn">search</button></a>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>Get the <br>
+                <span> Best Holiday </span><br> Planned by Experts! </h1>
+            <button class="cn"><a href="#">CONTACT US</a></button>
+            <div class="form ">
+                <h2>Want to Go For A Memorable Holiday?</h2><br>
+                <form action="connect.php" method="post">
+                    <input type="radio" id="international" name="country" value="international">
+                    <label for="international">international</label>
+                    <input type="radio" id="domestic" name="country" value="domestic">
+                    <label for="domestic">Domestic</label><br><br>
+                    <label for="name">Name</label>
+                    <BR>
+                    <input type="text" id="name" name="Name"><br>
+                    <BR>
+                    <lable for="Password">Password</lable>
+                    <BR>
+                    <input type="password" id="password" name="password">
+                    <BR>
+                    <BR>
+                    <label for="id">MAILID</label>
+                    <BR>
+                    <input type="email" id="id" name="MAILID">
+                    <BR>
+                    <BR>
+                    <label for="date">D.O.B</label>
+                    <BR>
+                    <input type="date" id="DB" name="DB">
+                    <BR>
+                    <BR>
+                    <button>SUBMIT</button>
+                    <BR>
+                </form>
+
+            </div>
+        </div>
+
+        <script>
+            function loadDoc() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo").innerHTML =
+                        this.responseText;
+                }
+                xhttp.open("GET", "info.txt");
+                xhttp.send();
+            }
+        </script>
+</body>
+
+</html>
